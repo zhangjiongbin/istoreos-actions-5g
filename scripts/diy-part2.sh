@@ -396,7 +396,7 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 # CONFIG_PACKAGE_luci-app-tencentddns=y
 
 # 内网穿透
-# CONFIG_PACKAGE_luci-app-zerotier=y
+CONFIG_PACKAGE_luci-app-zerotier=y
 # CONFIG_PACKAGE_luci-app-frpc=y
 # CONFIG_PACKAGE_luci-app-frps=y
 # CONFIG_PACKAGE_luci-app-nps=y
