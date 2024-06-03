@@ -114,15 +114,31 @@ pushd package/community
 # svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-guest-wifi
 mkdir luci-app-guest-wifi
 cp -rf ../../kiddin9/luci-app-guest-wifi/* luci-app-guest-wifi
-#Onliner (need luci-app-nlbwmon)
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-onliner
+#Onliner
 mkdir luci-app-onliner
 cp -rf ../../kiddin9/luci-app-onliner/* luci-app-onliner
-#svn export https://github.com/rufengsuixing/luci-app-onliner/trunk luci-app-onliner
 #Eqos（iStoreOS已有）
 #svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-eqos
-#Wolplus
+#Wolplus（已有Wol）
 # svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-wolplus
+#WiFischedule
+mkdir luci-app-wifischedule
+cp -rf ../../kiddin9/luci-app-wifischedule/* luci-app-wifischedule
+#RAMfree
+mkdir luci-app-ramfree
+cp -rf ../../kiddin9/luci-app-ramfree/* luci-app-ramfree
+#ttyd（conf已有）
+# mkdir luci-app-ttyd
+# cp -rf ../kiddin9/luci-app-ttyd/* luci-app-ttyd
+#usb3disable（禁用USB3.0接口）
+mkdir luci-app-usb3disable
+cp -rf ../../kiddin9/luci-app-usb3disable/* luci-app-usb3disable
+#NetData（系统监控）
+mkdir luci-app-netdata
+cp -rf ../../kiddin9/luci-app-netdata/* luci-app-netdata
+#rtbwmon（实施流量）
+mkdir luci-app-rtbwmon
+cp -rf ../../kiddin9/luci-app-rtbwmon/* luci-app-rtbwmon
 
 # 存储相关应用
 # Gowebdav（iStoreOS已有）
@@ -284,6 +300,11 @@ CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-app-onliner=y
 CONFIG_PACKAGE_luci-app-eqos=y
 # CONFIG_PACKAGE_luci-app-wolplus=y
+CONFIG_PACKAGE_luci-app-wifischedule=y
+CONFIG_PACKAGE_luci-app-ramfree=y
+# CONFIG_PACKAGE_luci-app-usb3disable=y
+CONFIG_PACKAGE_luci-app-luci-app-netdata=y
+CONFIG_PACKAGE_luci-app-luci-app-rtbwmon=y
 
 # 存储相关应用
 # CONFIG_PACKAGE_luci-app-gowebdav=y
@@ -459,7 +480,6 @@ CONFIG_PACKAGE_luci-app-modem=y
 CONFIG_PACKAGE_minicom=y
 
 # 脚本拨号工具依赖
-CONFIG_PACKAGE_grep=y
 CONFIG_PACKAGE_procps-ng=y
 CONFIG_PACKAGE_procps-ng-ps=y
 " >> .config
